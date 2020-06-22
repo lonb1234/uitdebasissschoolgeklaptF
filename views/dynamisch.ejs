@@ -3,8 +3,8 @@
 
 <h1><%=post.title%></h1>
 <p>
-  <%-post.content.substring(0, 200).replace(/(<([^>]+)>)/ig,"") + " ..."%>
+  <%-post.content.substring(0, 200).replace(/(<([^>]+)>)/ig,"") + " ..."%></P>
   <a href="/posts/<%=post._id%>">Verder lezen</a>
-</p>
+
 <% }) %>
 <%- include("partials/footer"); -%>
