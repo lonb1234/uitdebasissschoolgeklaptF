@@ -1,0 +1,36 @@
+<%- include("partials/menuheader"); -%>
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <br />
+    <label for="type">Soort verhaal:</label>
+
+    <select id="type" name="type">
+      <option value="Dynamisch">Dynamische verhalen</option>
+      <option value="Kind">Kindergedichten</option>
+      <option value="Kort">Korte verhalen</option>
+    </select>
+    <br /><br />
+
+    <label>Titel</label>
+    <br>
+
+    <input class="form-control" type="text" name="postTitle">
+    <br><br>
+    <label>Bericht</label>
+    <br>
+
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+    <textarea class="form-control" name="postBody" rows="22" cols="170"></textarea>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+    <script>
+      new FroalaEditor('textarea');
+    </script>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Opslaan</button>
+
+</form>
+<br />
+<%- include("partials/footer"); -%>

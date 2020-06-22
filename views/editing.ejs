@@ -1,0 +1,31 @@
+<%- include("partials/menuheader"); -%>
+<form class="" action="/edits/<%=ident%>" method="post">
+  <div class="form-group">
+    <br />
+    <label for="type">Soort verhaal:</label>
+
+    <select id="type" name="type" selected="<%=type%>">
+      <option value="Dynamisch">Dynamische verhalen</option>
+      <option value="Kind">Kindergedichten</option>
+      <option value="Kort">Korte verhalen</option>
+    </select>
+    <br /><br />
+
+    <label>Titel</label>
+    <br>
+
+    <input class="form-control" type="text" name="postTitle" value="<%=title%>">
+    <br><br>
+    <label>Bericht</label>
+    <br>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+    <textarea class="form-control" name="postBody" rows="22" cols="170"><%=content%></textarea>
+
+  </div>
+  <input type="hidden" name="_idd" value="<%= ident %>">
+  <button class="btn btn-primary" type="submit" name="button">Opslaan</button>
+
+</form>
+<br />
+<%- include("partials/footer"); -%>
