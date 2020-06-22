@@ -5,6 +5,6 @@
 <p>
   <%-post.content.substring(0, 200).replace(/(<([^>]+)>)/ig,"") + " ..."%></P>
   <a href="/posts/<%=post._id%>">Verder lezen</a>
-
+<br />
 <% }) %>
 <%- include("partials/footer"); -%>
